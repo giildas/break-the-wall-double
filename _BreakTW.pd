@@ -1,4 +1,4 @@
-#N canvas 226 88 751 522 10;
+#N canvas 1083 55 751 522 10;
 #N canvas 291 275 592 248 video 0;
 #X obj 95 35 inlet;
 #X obj 93 117 pix_texture;
@@ -38,7 +38,7 @@
 #X obj 108 246 hsl 128 15 0 900 0 0 empty empty sensibilite -2 -8 0
 15 -262144 -1 -1 0 1;
 #X obj 211 178 tgl 45 0 onoff empty ON/OFF 50 22 0 10 -260097 -258113
--1 1 1;
+-1 0 1;
 #X msg 211 129 0;
 #X obj 211 105 r reset;
 #N canvas 413 81 794 549 chrono 0;
@@ -282,7 +282,6 @@
 #X restore 235 106 pd compteur;
 #X text -45 323 couleurs aleatoires ET jolies (en fonction de la position
 !!!);
-#X text -45 353 changer les sons...;
 #X obj 14 75 s video;
 #X obj -44 160 sp/team_matrix 1;
 #X obj -45 -12 ../camera_in;
@@ -292,7 +291,10 @@
 #X obj 66 160 sp/team_matrix 2;
 #X msg -45 -34 horizontal;
 #X obj -45 -56 loadbang;
-#X connect 10 0 0 0;
-#X connect 10 0 8 0;
-#X connect 14 0 10 0;
-#X connect 15 0 14 0;
+#X text 250 165 CLIC sur reset au démarrage pour recentrer les blocs
+;
+#X text -45 353 changer les sons... CHANGER LES SONS !!!!!!!;
+#X connect 9 0 0 0;
+#X connect 9 0 7 0;
+#X connect 13 0 9 0;
+#X connect 14 0 13 0;
